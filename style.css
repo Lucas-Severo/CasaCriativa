@@ -119,3 +119,112 @@ button.fat:hover {
 .idea .description {
     margin: 16px 0;
 }
+
+/* MODAL */
+
+#modal {
+    background: #ff5E84;
+    position: fixed;
+    top: 0;
+    
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+
+    transition: 400ms;
+}
+
+#modal .content {
+    margin-top: 128px;
+    margin-bottom: 128px;
+    height: 100%;
+    color: #FFF;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: 1 / span 2;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ff5E84;
+    outline: none;
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+    align-self: end;
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #fff;
+    color: #ff5E84;
+    text-decoration: none;
+}
+
+form button {
+    background: #FFF;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #0984e3;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
