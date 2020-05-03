@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Rodrigues Severo">
+    <meta name="description" content="Um site para cadastrar ideias">
+    {% block title %}
+        <title>Casa Criativa</title>
+    {% endblock %}
+    {% include "head.html" %}
+</head>
+<body id="{{bodyId}}">
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Modal -->
+    {% include "modal.html" %}
+
+    <script src="/js/script.js">
+    </script>
+</body>
+</html>
