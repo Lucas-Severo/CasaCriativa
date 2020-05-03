@@ -60,5 +60,16 @@ module.exports = {
     
             res.redirect("/ideias");
         });
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id;
+        db.run(`DELETE FROM ideas WHERE id = ?`, [id], function(err) {
+            if(err) {
+                return res.status(400).send("Erro no banco de dados");
+            }
+
+            res.redirect("/ideias");
+        });
     }
 }

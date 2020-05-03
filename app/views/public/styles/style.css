@@ -109,6 +109,7 @@ button:hover {
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 32px;
+    position: relative;
 }
 
 .idea img {
@@ -215,7 +216,14 @@ form a:hover {
     text-decoration: none;
 }
 
-form button {
+.delete{
+    position: absolute;
+    padding: 18px;
+    top: 0;
+    right: 0;
+}
+
+#modal form button {
     background: #FFF;
     width: 150px;
     height: 40px;
@@ -227,7 +235,7 @@ form button {
     transition: 400ms;
 }
 
-form button:hover {
+#modal form button:hover {
     background-color: #0984e3;
     color: #FFF;
     text-decoration: none;

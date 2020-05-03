@@ -11,6 +11,9 @@
                 {{idea.description}}
             </div>
             <a href="{{idea.link}}" target="__blank" rel="noreferrer noopen">Ir para a ideia</a>
+            <form class="delete" action="/{{idea.id}}" method="post">
+                <button>Excluir</button>
+            </form>
         </div>
     </div>
 {% endfor %}

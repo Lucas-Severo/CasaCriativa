@@ -9,4 +9,6 @@ routes.get("/ideias", IdeaController.show);
 
 routes.post("/", IdeaController.create);
 
+routes.post("/:id", IdeaController.delete);
+
 module.exports = routes;
